@@ -14,25 +14,8 @@ const Navigation = () => {
           <img src={NavImage} alt="navImage" />
         </div>
 
-        <div className="hidden lg:block h-[0.05rem] w-[36rem] text-green-700 bg-[#d0d6f976] absolute right-[44rem]"></div>
-        <div className="text-white text-sm tracking-widest bg-[#D0D6F9] color px-28 py-10 relative">
-          <ul>
-            {links.map((link) => {
-              const { id, titleNumber, title, url } = link;
-              return (
-                <li key={id}>
-                  <Link to={url} className="mr-6 title">
-                    {" "}
-                    <span className="fig lg:mr-1">{titleNumber}</span> {title}
-                  </Link>
-                </li>
-              );
-            })}{" "}
-          </ul>
-        </div>
-
-        {/* <div className=" h-[0.05rem] w-[36rem] text-green-700 bg-[#d0d6f976] absolute right-[44rem]"></div> */}
-        {/* <div className=" text-white text-sm tracking-widest bg-[#D0D6F9] color px-28 py-10 relative">
+        <div className=" h-[0.05rem] w-[36rem] text-green-700 bg-[#d0d6f976] absolute right-[44rem]"></div>
+        <div className=" text-white text-sm tracking-widest bg-[#D0D6F9] color px-28 py-10 relative">
           <Link to="/" className="mr-6 title">
             <span className="fig">00</span>Home
           </Link>
@@ -45,9 +28,8 @@ const Navigation = () => {
           <Link to="/technology" className="mr-6 title">
             <span className="fig">03</span>Technology
           </Link>
-        </div> */}
+        </div>
       </div>
-
       <div className="small-container flex justify-between md:hidden items-center">
         <div className="bg-white rounded-full ">
           <img src={NavImage} alt="navImage" />
@@ -64,6 +46,7 @@ export default Navigation;
 
 const Nav = styled.div`
   .fig {
+    margin-right: 7px;
     font-weight: 700;
     letter-spacing: 2px;
     font-family: sans-serif;
@@ -90,5 +73,4 @@ const Nav = styled.div`
     width: 100%;
     left: 0;
   }
-  margin-right: 7px;
 `;

@@ -11,13 +11,29 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+ul {
+  list-style: none;
+  display: flex;
+}
+ul li {
+  list-style: none;
+  display: block;
+}
+
 .container {
   width: 79.6%;
-
   margin-left: 9.89rem;
+}
+.small-container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .home {
   background-image: url("./assets/home/background-home-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .page {
   min-height: 100vh;
@@ -27,4 +43,26 @@
 }
 .top-wording {
   font-family: "Barlow", sans-serif;
+}
+/* tablet screen */
+@media only screen and (max-width: 768px) {
+  .home {
+    background-image: url("./assets/home/background-home-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+/* mobile screen */
+@media only screen and (max-width: 640px) {
+  .home {
+    background-image: url("./assets/home/background-home-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .small-container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

@@ -5,7 +5,7 @@ import Destination from "./pages/Destination";
 import Technology from "./pages/Technology";
 
 //component
-import Navigation from "./component/Navigation";
+import Testing from "./Testing";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
         <Route exact path="/crew" element={<Crew />} />
         <Route exact path="/destination" element={<Destination />} />
         <Route exact path="/technology" element={<Technology />} />
+        <Route exact path="/testing" element={<Testing />} />
       </Routes>
     </BrowserRouter>
   );
