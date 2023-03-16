@@ -10,14 +10,14 @@ export const links = [
   {
     id: 2,
     titleNumber: "01",
-    title: "Crew",
-    url: "/crew",
+    title: "Detsination",
+    url: "/destination",
   },
   {
     id: 3,
     titleNumber: "02",
-    title: "Destination",
-    url: "/destination",
+    title: "Crew",
+    url: "/crew",
   },
   {
     id: 4,
