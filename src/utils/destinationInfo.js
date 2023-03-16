@@ -1,5 +1,7 @@
 import Moon1 from "../assets/destination/image-moon.png";
 import Mars1 from "../assets/destination/image-mars.png";
+import Europa1 from "../assets/destination/image-europa.png";
+import Titan1 from "../assets/destination/image-titan.png";
 export const destinationInfo = [
   {
     id: 1,
@@ -25,24 +27,25 @@ export const destinationInfo = [
   },
   {
     id: 3,
-    image: Mars1,
+    image: Europa1,
     title: "satun",
-    note: "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!",
+    note: "Pick your destination Moon Mars Europa Titan Europa The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.",
     distance: "Avg. distance",
-    kilometers: "225",
+    kilometers: "628",
     km: "mil. km",
     time: "Est. travel time",
-    days: "9 months",
+    days: "3 years",
   },
-];
 
-export const destinationUrl = [
   {
-    id: 1,
-    url: "/moon",
-  },
-  {
-    id: 2,
-    url: "/mars",
+    id: 4,
+    image: Titan1,
+    title: "titan",
+    note: "Pick your destination Moon Mars Europa Titan Titan The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn",
+    distance: "Avg. distance",
+    kilometers: "1.6",
+    km: "bil. km",
+    time: "Est. travel time",
+    days: "7 years",
   },
 ];

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { links } from "../utils/url";
 import "../index.css";
@@ -21,7 +21,7 @@ const Navigation = () => {
               const { id, titleNumber, title, url } = link;
               return (
                 <li key={id}>
-                  <Link to={url} className="mr-6 title">
+                  <Link to={url} className="title mr-6">
                     {" "}
                     <span className="fig lg:mr-1">{titleNumber}</span> {title}
                   </Link>
@@ -90,5 +90,19 @@ const Nav = styled.div`
     width: 100%;
     left: 0;
   }
-  margin-right: 7px;
+  .nav-fixed {
+    position: relative;
+  }
+
+  .nav-fixed::after {
+    content: " ";
+    position: absolute;
+    bottom: -2.6rem;
+    left: 0;
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    transition: 0.3s;
+  }
 `;
