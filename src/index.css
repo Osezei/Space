@@ -50,11 +50,16 @@ ul li {
   font-family: "Barlow", sans-serif;
 }
 /* tablet screen */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .home {
     background-image: url("./assets/home/background-home-tablet.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

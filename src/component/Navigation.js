@@ -8,14 +8,14 @@ import styled from "styled-components";
 
 const Navigation = () => {
   return (
-    <Nav className=" items-center pt-8 uppercase text-home">
+    <Nav className="items-center pt-8 uppercase text-home">
       <div className="hidden md:flex justify-between items-center">
         <div className="bg-white rounded-full ml-10">
           <img src={NavImage} alt="navImage" />
         </div>
 
         <div className="hidden lg:block h-[0.05rem] w-[36rem] text-green-700 bg-[#d0d6f976] absolute right-[44rem]"></div>
-        <div className="text-white text-sm tracking-widest bg-[#D0D6F9] color px-28 py-10 relative">
+        <div className="text-white text-sm tracking-widest bg-[#D0D6F9] color px-10 lg:px-28 py-10 relative">
           <ul>
             {links.map((link) => {
               const { id, titleNumber, title, url } = link;

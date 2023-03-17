@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Crew from "./pages/Crew";
 import Destination from "./pages/Destination";
 import Technology from "./pages/Technology";
+//import Navigation from "./component/Navigation";
 
 //component
 import Testing from "./Testing";
