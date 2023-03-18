@@ -40,6 +40,11 @@ ul li {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.crew {
+  background-image: url("./assets/crew/background-crew-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .page {
   min-height: 100vh;
 }
@@ -56,10 +61,20 @@ ul li {
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .destination {
+    background-image: url("./assets/destination/background-destination-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   .container {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+  }
+  .crew {
+    background-image: url("./assets/crew/background-crew-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -67,6 +82,16 @@ ul li {
 @media only screen and (max-width: 640px) {
   .home {
     background-image: url("./assets/home/background-home-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .destination {
+    background-image: url("./assets/destination/background-destination-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .crew {
+    background-image: url("./assets/crew/background-crew-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   }

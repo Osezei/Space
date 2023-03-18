@@ -90,7 +90,7 @@ const Destination = () => {
                     </div>
                   ) : null}
                   {toggled === id ? (
-                    <div className="hidden mt-[10px] lg:grid grid-cols-2 ">
+                    <div className="hidden mt-[10px] lg:grid grid-cols-2">
                       <div className=" w-[450px] mt-5 ml-6">
                         <img src={image} alt={title} className="" />
                       </div>

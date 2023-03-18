@@ -14,8 +14,13 @@ const Hero = () => {
           experience!
         </p>
       </div>
-      <div className="pt-14 lg:pt-14 lg:hover:bg-[#d0d6f976] flex justify-center lg:block lg:px-14 lg:py-10 rounded-full ease-in-out duration-300">
-        <p className="text-home bg-white text-black w-fit px-20 py-32 lg:py-20 lg:px-12 rounded-full text-3xl">
+      <div className="hidden lg:block lg:hover:bg-[#d0d6f976] px-12 py-10  rounded-full ease-in-out duration-300">
+        <p className="text-home bg-white text-black px-20 py-32 rounded-full text-3xl">
+          EXPLORE
+        </p>
+      </div>
+      <div className="lg:hidden mt-12 lg:bg-[#d0d6f976] flex justify-center  rounded-full ease-in-out duration-300">
+        <p className="text-home bg-white text-black w-fit px-20 py-32 rounded-full text-3xl">
           EXPLORE
         </p>
       </div>
