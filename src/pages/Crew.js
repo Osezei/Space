@@ -10,10 +10,10 @@ const Crew = () => {
     <Section className="page crew ">
       <Navigation />
       <div className="text-white container relative">
-        <div className="mt-10">
+        <div className=" my-5 lg:mt-10 text-center md:text-left">
           <h3 className="text-sm md:text-2xl  text-home uppercase">
-            <span className="text-home text-[#d0d6f976] pr-2 ">02</span> Meet
-            your crew
+            <span className="text-home text-[#d0d6f976]">02</span> Meet your
+            crew
           </h3>
         </div>
         <div>
@@ -21,29 +21,32 @@ const Crew = () => {
             return (
               <article key={id}>
                 {toggled === id ? (
-                  <div className="flex justify-between">
-                    <div className="my-auto">
-                      <h2 className="uppercase text-xl lg:text-2xl mb-4 text-home text-[#d0d6f976] ">
+                  <div className="flex flex-col-reverse md:flex-col lg:flex-row lg:justify-between">
+                    <div className="w-[327px] h-[237px] md:w-[500px]  md:h-[335px] mt-10 md:mx-auto lg:w-full lg:my-auto text-center lg:text-left">
+                      <h2 className="uppercase text-xl md:text-2xl mb-4 text-home text-[#d0d6f976] ">
                         {position}
                       </h2>
-                      <h5 className="text-3xl lg:text-5xl uppercase mb-7 text-home">
+                      <h5 className="text-2xl md:text-5xl uppercase mb-3 lg:mb-7 text-home">
                         {name}
                       </h5>
 
-                      <p className=" top-wording text-lg leading-loose">
+                      <p className="lg:w-[444px] lg:h-[160px] top-wording text-lg leading-loose">
                         {note}
                       </p>
                     </div>
-                    <div className="w-[950px] h-full">
-                      <img src={image} alt={name} className="w-[500px]" />
-                    </div>
+
+                    <img
+                      src={image}
+                      alt={name}
+                      className="w-[327px] h-[223px] md:w-[369px] md:h-[532px] lg:w-[500px] lg:h-[600px] mx-auto"
+                    />
                   </div>
                 ) : null}
               </article>
             );
           })}
         </div>
-        <div className="absolute bottom-[300px] left-[145px] lg:bottom-[70px] lg:left-0">
+        <div className="absolute bottom-[245px] left-[145px] md:left-[330px] md:bottom-[540px] lg:bottom-[80px] lg:left-0">
           {crewInfo.map(({ id, name }) => {
             return (
               <div
