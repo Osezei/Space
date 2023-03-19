@@ -122,3 +122,9 @@ ul li {
     margin-right: auto;
   }
 }
+.nav-links {
+  display: none;
+}
+.nav-links-mobile {
+  position: block;
+}

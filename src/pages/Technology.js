@@ -46,7 +46,7 @@ const Technology = () => {
                         <h3 className="text-[50px] uppercase text-home">
                           {title}
                         </h3>
-                        <p className="text-[18px] top-wording pt-[20px]">
+                        <p className="text-[18px] top-wording pt-[20px] text-[#D0D6F9]">
                           {note}
                         </p>
                       </div>
@@ -63,28 +63,54 @@ const Technology = () => {
           </div>
         </div>
         {/* mobile and tablet */}
-        <div className=" hidden">
+        <div className="mt-14 lg:hidden">
           <div>
+            {techMobile.map(({ id, image, title }) => {
+              return (
+                <div key={id}>
+                  {toggled === id ? (
+                    <>
+                      <img src={image} alt={title} className="" />
+                    </>
+                  ) : null}
+                </div>
+              );
+            })}
+          </div>
+          <div className="flex justify-center mt-16">
             {techMobile.map(({ id }) => {
               return (
-                <button key={id} onClick={() => setToggled(id)}>
+                <button
+                  key={id}
+                  onClick={() => setToggled(id)}
+                  className={`${
+                    toggled === id
+                      ? "w-[40px] h-[40px] md:w-[80px] md:h-[80px] border-2 rounded-full border-[#d0d6f976] bg-white text-[16px] md:text-[32px] text-black text-home ease-in-out mr-[16px]"
+                      : "w-[40px] h-[40px] md:w-[80px] md:h-[80px] border-2 rounded-full border-[#d0d6f976] text-home text-[16px] md:text-[32px] ease-in-out mr-[16px]"
+                  }`}
+                >
                   {id}
                 </button>
               );
             })}
           </div>
-          <div className="text-white">
+          <div className="text-white text-center">
             {techMobile.map(({ title, titleTop, note, id, image }) => {
               return (
                 <article key={id} className="">
                   {toggled === id ? (
-                    <div className="flex">
+                    <div className="flex justify-center">
                       <div>
-                        <h2>{titleTop}</h2>
-                        <h3>{title}</h3>
-                        <p>{note}</p>
+                        <h2 className="text-[#D0D6F9] text-[16px] text-home uppercase mt-[25px]">
+                          {titleTop}
+                        </h2>
+                        <h3 className="text-[40px] uppercase text-home">
+                          {title}
+                        </h3>
+                        <p className="mt-[20px] text-[#D0D6F9] w-[327px] h-[150px] md:w-[458px] md:h-[140px] text-[15px] md:text-[16px]">
+                          {note}
+                        </p>
                       </div>
-                      <img src={image} alt={title} />
                     </div>
                   ) : null}
                 </article>

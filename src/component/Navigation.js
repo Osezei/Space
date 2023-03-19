@@ -4,9 +4,13 @@ import { links } from "../utils/url";
 import "../index.css";
 import NavImage from "../assets/shared/logo.svg";
 import Menu from "../assets/shared/icon-hamburger.svg";
+import Close from "../assets/shared/icon-close.svg";
+
 import styled from "styled-components";
 
 const Navigation = () => {
+  const [toggled, setToggled] = useState(false);
+
   return (
     <Nav className="items-center pt-8 uppercase text-home">
       <div className="hidden md:flex justify-between items-center">
@@ -53,7 +57,38 @@ const Navigation = () => {
           <img src={NavImage} alt="navImage" />
         </div>
         <div className="text-white">
-          <img src={Menu} alt="menu-bar" />
+          <nav
+            className={`${
+              toggled === true ? "text-green-700 flex" : "text-red-700 flex"
+            }`}
+          >
+            <ul>
+              {links.map((link) => {
+                const { id, titleNumber, title, url } = link;
+                return (
+                  <li key={id}>
+                    {toggled === true ? (
+                      <Link to={url} className="">
+                        <span className="">{titleNumber}</span> {title}
+                      </Link>
+                    ) : null}
+                  </li>
+                );
+              })}{" "}
+            </ul>
+            <button
+              onClick={() => setToggled(false)}
+              className={`${toggled === true ? "block" : "hidden"}`}
+            >
+              <img src={Close} alt="close" />
+            </button>
+          </nav>
+          <button
+            onClick={() => setToggled(true)}
+            className={`${toggled === true ? "hidden" : "block"}`}
+          >
+            <img src={Menu} alt="menu-bar" />
+          </button>
         </div>
       </div>
     </Nav>
