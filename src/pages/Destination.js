@@ -77,7 +77,7 @@ const Destination = () => {
                               <span className="uppercase"> {km}</span>
                             </h3>
                           </div>
-                          <div className="mt-3">
+                          <div className="mt-3 ">
                             <p className="uppercase text-home text-sm">
                               {time}
                             </p>

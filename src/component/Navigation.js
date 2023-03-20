@@ -12,7 +12,7 @@ const Navigation = () => {
   const [toggled, setToggled] = useState(false);
 
   return (
-    <Nav className="items-center pt-8 uppercase text-home">
+    <Nav className="items-center pt-8 uppercase text-home text-white nav-list pag">
       <div className="hidden md:flex justify-between items-center">
         <div className="bg-white rounded-full ml-10">
           <img src={NavImage} alt="navImage" />
@@ -34,62 +34,53 @@ const Navigation = () => {
             })}{" "}
           </ul>
         </div>
-
-        {/* <div className=" h-[0.05rem] w-[36rem] text-green-700 bg-[#d0d6f976] absolute right-[44rem]"></div> */}
-        {/* <div className=" text-white text-sm tracking-widest bg-[#D0D6F9] color px-28 py-10 relative">
-          <Link to="/" className="mr-6 title">
-            <span className="fig">00</span>Home
-          </Link>
-          <Link to="/crew" className="mr-6 title">
-            <span className="fig">01</span>Crew
-          </Link>
-          <Link to="/destination" className="mr-6 title">
-            <span className="fig">02</span>Destination
-          </Link>
-          <Link to="/technology" className="mr-6 title">
-            <span className="fig">03</span>Technology
-          </Link>
-        </div> */}
       </div>
 
-      <div className="small-container flex justify-between md:hidden items-center">
+      <div className="small-container flex justify-between items-center md:hidden">
         <div className="bg-white rounded-full ">
           <img src={NavImage} alt="navImage" />
         </div>
-        <div className="text-white">
-          <nav
+
+        <nav
+          className={`${
+            toggled === true ? "navigation relative" : " navigation relative"
+          }`}
+        >
+          {/* close button */}
+          <button
+            onClick={() => setToggled(false)}
             className={`${
-              toggled === true ? "text-green-700 flex" : "text-red-700 flex"
+              toggled === true
+                ? "block absolute top-[15px] right-[10px]"
+                : "hidden"
             }`}
           >
-            <ul>
-              {links.map((link) => {
-                const { id, titleNumber, title, url } = link;
-                return (
-                  <li key={id}>
-                    {toggled === true ? (
-                      <Link to={url} className="">
-                        <span className="">{titleNumber}</span> {title}
-                      </Link>
-                    ) : null}
-                  </li>
-                );
-              })}{" "}
-            </ul>
-            <button
-              onClick={() => setToggled(false)}
-              className={`${toggled === true ? "block" : "hidden"}`}
-            >
-              <img src={Close} alt="close" />
-            </button>
-          </nav>
-          <button
-            onClick={() => setToggled(true)}
-            className={`${toggled === true ? "hidden" : "block"}`}
-          >
-            <img src={Menu} alt="menu-bar" />
+            <img src={Close} alt="close" />
           </button>
-        </div>
+
+          {/* links */}
+          <ul className="flex flex-col mt-32 gap-2">
+            {links.map((link) => {
+              const { id, titleNumber, title, url } = link;
+              return (
+                <li key={id} className="mt-3">
+                  {toggled === true ? (
+                    <Link to={url} className="ml-[30px]">
+                      <span className="mr-2">{titleNumber}</span> {title}
+                    </Link>
+                  ) : null}
+                </li>
+              );
+            })}{" "}
+          </ul>
+        </nav>
+
+        <button
+          onClick={() => setToggled(true)}
+          className={`${toggled === true ? "hidden" : "block"}`}
+        >
+          <img src={Menu} alt="menu-bar" />
+        </button>
       </div>
     </Nav>
   );
@@ -98,6 +89,8 @@ const Navigation = () => {
 export default Navigation;
 
 const Nav = styled.div`
+  .pag {
+  }
   .fig {
     font-weight: 700;
     letter-spacing: 2px;
