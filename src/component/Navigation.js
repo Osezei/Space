@@ -44,7 +44,7 @@ const Navigation = () => {
         <nav
           className={`${
             toggled === true
-              ? "navigation relative"
+              ? "navigation relative h-screen"
               : " navigation relative navigation-close"
           }`}
         >
