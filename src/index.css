@@ -141,7 +141,7 @@ ul li {
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(40.7742px);
 
-  height: 90vh;
+  min-height: 100vh;
   width: 254px;
   z-index: 1;
   transform: translateX(0%);
