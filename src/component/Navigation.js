@@ -43,7 +43,9 @@ const Navigation = () => {
 
         <nav
           className={`${
-            toggled === true ? "navigation relative" : " navigation relative"
+            toggled === true
+              ? "navigation relative"
+              : " navigation relative navigation-close"
           }`}
         >
           {/* close button */}
@@ -51,7 +53,7 @@ const Navigation = () => {
             onClick={() => setToggled(false)}
             className={`${
               toggled === true
-                ? "block absolute top-[15px] right-[10px]"
+                ? "block absolute top-[38px] right-[35px]"
                 : "hidden"
             }`}
           >
@@ -63,9 +65,9 @@ const Navigation = () => {
             {links.map((link) => {
               const { id, titleNumber, title, url } = link;
               return (
-                <li key={id} className="mt-3">
+                <li key={id} className="mt-4">
                   {toggled === true ? (
-                    <Link to={url} className="ml-[30px]">
+                    <Link to={url} className="ml-[30px] text-[16px] text-home">
                       <span className="mr-2">{titleNumber}</span> {title}
                     </Link>
                   ) : null}

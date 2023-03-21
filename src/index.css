@@ -11,8 +11,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-}
+/* body {
+  z-index: 99;
+} */
 ul {
   list-style: none;
   display: flex;
@@ -136,13 +137,21 @@ ul li {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: red;
-  height: 100vh;
-  width: 50%;
+  /* background-color: red; */
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.7742px);
+
+  height: 667px;
+  width: 254px;
   z-index: 1;
-  /* transform: translateX(-100%); */
+  transform: translateX(0%);
   /* transform: translateX(0%); */
   transition: transform 0.5s ease-in-out;
-  transform: translateX(0%);
+
   /* position: fixed; */
+}
+.navigation-close {
+  display: none;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
 }
